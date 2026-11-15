@@ -11,6 +11,7 @@
   <script defer src="script.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to the tour</a>
   <div class="scroll-meter" aria-hidden="true"><span id="scroll-progress"></span></div>
   <header class="topbar">
     <a class="brand" href="#top" aria-label="Retro home"><img src="assets/retro-mark.png" alt="" width="34" height="34"><span>retro</span></a>
@@ -18,8 +19,8 @@
     <a class="nav-cta" href="#inside">Take a look <span aria-hidden="true">↗</span></a>
   </header>
 
-  <main id="top">
-    <section class="hero section-shell">
+  <main id="main-content" tabindex="-1">
+    <section class="hero section-shell" id="top">
       <div class="hero-copy reveal">
         <p class="eyebrow"><i></i> Private beta · not publicly available</p>
         <h1>Find your<br><em>focus groove.</em></h1>
@@ -58,9 +59,9 @@
             <h2 id="story-title">Choose a pace<br><em>that feels doable.</em></h2>
             <p id="story-body">A quick sprint, a familiar Pomodoro, or a longer stretch. Pick a preset, make it yours, and let the clock hold the time for you.</p>
             <div class="story-progress"><span id="story-progress"></span></div>
-            <div class="story-tabs" role="tablist" aria-label="Focus ritual steps"><button class="story-tab active" data-story="0" role="tab" aria-selected="true">Set a pace</button><button class="story-tab" data-story="1" role="tab" aria-selected="false">Settle in</button><button class="story-tab" data-story="2" role="tab" aria-selected="false">Take a breath</button></div>
+            <div class="story-tabs" role="tablist" aria-label="Focus ritual steps"><button class="story-tab active" id="story-tab-0" data-story="0" role="tab" aria-controls="story-screen" aria-selected="true" tabindex="0">Set a pace</button><button class="story-tab" id="story-tab-1" data-story="1" role="tab" aria-controls="story-screen" aria-selected="false" tabindex="-1">Settle in</button><button class="story-tab" id="story-tab-2" data-story="2" role="tab" aria-controls="story-screen" aria-selected="false" tabindex="-1">Take a breath</button></div>
           </div>
-          <div class="story-window"><div class="story-screen" id="story-screen"><div class="screen-top"><span>◈ RETRO</span><span>MONDAY · 09:41</span></div><div class="preset-head">Pick your pace</div><div class="preset-list"><div class="preset selected"><span class="preset-symbol">◌</span><span><b>Sprint</b><small>15 min focus · 3 min rest</small></span><strong>15 / 3</strong></div><div class="preset"><span class="preset-symbol">◷</span><span><b>Pomodoro</b><small>25 min focus · 5 min rest</small></span><strong>25 / 5</strong></div><div class="preset"><span class="preset-symbol">◉</span><span><b>Deep</b><small>50 min focus · 10 min rest</small></span><strong>50 / 10</strong></div></div><div class="screen-bottom"><span>YOUR FOCUS, YOUR PACE</span><span>⌘ , SETTINGS</span></div></div><div class="window-shadow"></div></div>
+          <div class="story-window"><div class="story-screen" id="story-screen" role="tabpanel" aria-labelledby="story-tab-0" tabindex="0"><div class="screen-top"><span>◈ RETRO</span><span>MONDAY · 09:41</span></div><div class="preset-head">Pick your pace</div><div class="preset-list"><div class="preset selected"><span class="preset-symbol">◌</span><span><b>Sprint</b><small>15 min focus · 3 min rest</small></span><strong>15 / 3</strong></div><div class="preset"><span class="preset-symbol">◷</span><span><b>Pomodoro</b><small>25 min focus · 5 min rest</small></span><strong>25 / 5</strong></div><div class="preset"><span class="preset-symbol">◉</span><span><b>Deep</b><small>50 min focus · 10 min rest</small></span><strong>50 / 10</strong></div></div><div class="screen-bottom"><span>YOUR FOCUS, YOUR PACE</span><span>⌘ , SETTINGS</span></div></div><div class="window-shadow"></div></div>
         </div>
       </div>
       <div class="story-steps" aria-hidden="true"><div class="story-step" data-step="0"></div><div class="story-step" data-step="1"></div><div class="story-step" data-step="2"></div></div>
@@ -72,10 +73,10 @@
       <div class="sound-layout">
         <div class="record-scene"><div class="record-shadow"></div><div class="record"><div class="groove groove-1"></div><div class="groove groove-2"></div><div class="groove groove-3"></div><div class="record-center"><span>RETRO<br>STEREO</span><i></i></div></div><div class="tonearm"><span></span></div><div class="sound-note">PRESS PLAY<br>STAY A WHILE</div></div>
         <div class="track-picker"><div class="track-picker-top"><span>THE SOUND DECK</span><span>4 ORIGINAL LOOPS</span></div>
-          <button class="track-row active" data-track="lofi-study"><span class="track-number">01</span><span class="track-art art-amber">♫</span><span class="track-meta"><b>Lo-fi Study</b><small>warm keys · soft crackle</small></span><span class="track-state">READY</span></button>
-          <button class="track-row" data-track="late-night-jazz"><span class="track-number">02</span><span class="track-art art-blue">♬</span><span class="track-meta"><b>Late-night Jazz</b><small>easy horns · blue hour</small></span><span class="track-state">PLAY</span></button>
-          <button class="track-row" data-track="soft-piano"><span class="track-number">03</span><span class="track-art art-rose">♩</span><span class="track-meta"><b>Soft Focus Piano</b><small>slow notes · open space</small></span><span class="track-state">PLAY</span></button>
-          <button class="track-row" data-track="rainy-cafe"><span class="track-number">04</span><span class="track-art art-green">☂</span><span class="track-meta"><b>Rainy Cafe</b><small>window rain · cafe hum</small></span><span class="track-state">PLAY</span></button>
+          <button class="track-row active" data-track="lofi-study" aria-pressed="true"><span class="track-number">01</span><span class="track-art art-amber">♫</span><span class="track-meta"><b>Lo-fi Study</b><small>warm keys · soft crackle</small></span><span class="track-state">READY</span></button>
+          <button class="track-row" data-track="late-night-jazz" aria-pressed="false"><span class="track-number">02</span><span class="track-art art-blue">♬</span><span class="track-meta"><b>Late-night Jazz</b><small>easy horns · blue hour</small></span><span class="track-state">PLAY</span></button>
+          <button class="track-row" data-track="soft-piano" aria-pressed="false"><span class="track-number">03</span><span class="track-art art-rose">♩</span><span class="track-meta"><b>Soft Focus Piano</b><small>slow notes · open space</small></span><span class="track-state">PLAY</span></button>
+          <button class="track-row" data-track="rainy-cafe" aria-pressed="false"><span class="track-number">04</span><span class="track-art art-green">☂</span><span class="track-meta"><b>Rainy Cafe</b><small>window rain · cafe hum</small></span><span class="track-state">PLAY</span></button>
           <div class="deck-controls"><button id="audio-toggle" class="audio-button" aria-label="Play soundtrack preview">▶</button><div class="waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="audio-label" id="audio-label">LO-FI STUDY · READY</span></div>
           <audio id="deck-audio" preload="none" loop src="assets/audio/lofi-study.wav"></audio>
           <p class="sound-footnote">Made for this project · CC0 audio · your volume stays in your hands</p>

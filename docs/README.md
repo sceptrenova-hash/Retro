@@ -29,7 +29,7 @@ Keep the relative asset paths intact if hosting below a repository path. This pu
 
 ## Accessibility and behavior
 
-- Keyboard-friendly links, buttons, track selection, and ARIA labels for interactive controls.
+- Keyboard-friendly links and buttons; the story tabs support arrow, Home, and End keys, and audio track selection exposes its pressed state.
 - `prefers-reduced-motion` disables scroll-driven movement and decorative animation.
 - Responsive layout for phone, tablet, and desktop widths.
 - No account data is collected or sent anywhere. Sound files load from this site's own `assets/audio/` folder.
@@ -39,6 +39,6 @@ Keep the relative asset paths intact if hosting below a repository path. This pu
 
 - `index.html` — page structure and copy.
 - `styles.css` — layout, responsive styles, and motion.
-- `script.js` — scroll progress/reveals, story steps, and local audio preview.
+- `script.js` — scroll progress/reveals, scroll-linked story depth, accessible story navigation, active section markers, and local audio preview.
 - `assets/retro-icon.png` — supplied Retro app icon used as the site identity.
 - `assets/audio/*.wav` — the four bundled Retro soundscape files, reproduced for the preview.
