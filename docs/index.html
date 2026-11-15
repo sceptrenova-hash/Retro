@@ -3,85 +3,121 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#171817">
-  <meta name="description" content="Retro is a small focus studio for Mac: one calm timer, four original soundscapes, and room to finish one thing at a time.">
-  <title>Retro — a little room to focus</title>
+  <meta name="theme-color" content="#f4f0e6">
+  <meta name="description" content="Retro is a small Mac focus studio: one calm timer, original soundscapes, and room to finish one thing at a time.">
+  <title>Retro — find your focus rhythm</title>
   <link rel="icon" type="image/png" href="assets/retro-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=studio-20261115">
-  <script defer src="script.js?v=studio-20261115"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=signal-studio-1">
+  <script defer src="script.js?v=signal-studio-1"></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to the page</a>
-  <div class="progress" aria-hidden="true"><i id="progress-bar"></i></div>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="reading-line" aria-hidden="true"><i id="progress-bar"></i></div>
   <header class="nav">
-    <a class="wordmark" href="#top" aria-label="Retro home"><img src="assets/retro-mark.png" width="34" height="34" alt=""><span>retro<span class="period">.</span></span></a>
-    <nav aria-label="Main navigation"><a href="#ritual">The ritual</a><a href="#film">A look inside</a><a href="#sound">Sound</a></nav>
-    <a class="beta-pill" href="#beta"><span></span> Private beta <b>↗</b></a>
+    <a class="brand" href="#top" aria-label="Retro home"><img src="assets/retro-mark.png" width="32" height="32" alt=""><span>retro<span>.</span></span></a>
+    <nav aria-label="Main navigation"><a href="#ritual">The rhythm</a><a href="#preview">The app</a><a href="#sound">Sound</a></nav>
+    <a class="beta-chip" href="#beta"><i></i>Private beta <span>↗</span></a>
   </header>
   <main id="main">
     <section class="hero" id="top">
-      <img class="hero-image" src="assets/retro-launch-key-art.webp" alt="A warm, late-night desk with a retro Mac displaying a simple focus timer" fetchpriority="high">
-      <div class="hero-shade"></div>
-      <div class="hero-copy">
-        <p class="kicker"><span class="sunburst">✳</span> A SMALL STUDIO FOR YOUR ATTENTION</p>
-        <h1>One thing.<br><em>All the way in.</em></h1>
-        <p class="hero-deck">A focus timer with a little atmosphere. Choose a rhythm, find your sound, and make room for the work in front of you.</p>
-        <div class="hero-actions"><a class="button button-light" href="#ritual">Take the tour <span>↓</span></a><span class="hero-caption">MADE FOR MAC · PRIVATE BETA</span></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> A SMALL MAC APP FOR BIG FOCUS</div>
+          <h1>Find your<br><em>focus rhythm.</em></h1>
+          <p class="hero-lede">One timer. A sound that fits. A little more space between you and the noise.</p>
+          <div class="hero-actions"><a class="button button-dark" href="#ritual">Explore Retro <span>↓</span></a><span class="micro-note">MADE FOR MAC · PRIVATE BETA</span></div>
+          <div class="hero-proof"><span class="proof-icon">✳</span><span>Start small. Stay with one thing.</span></div>
+        </div>
+        <div class="hero-art" aria-label="Illustrative preview of the Retro focus app interface">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit-dot"></div>
+          <div class="menu-float"><span class="menu-cassette">▰</span><span>RETRO</span><i></i><b>25:00</b></div>
+          <div class="app-window">
+            <div class="window-top"><div class="traffic"><i></i><i></i><i></i></div><span>RETRO · FOCUS STUDIO</span><span class="window-dots" aria-hidden="true">···</span></div>
+            <div class="window-inner">
+              <div class="window-label"><span>MONDAY SESSION</span><span class="live-dot">READY</span></div>
+              <div class="timer-wrap"><div class="timer-ring"><div><small>DEEP WORK</small><strong>25<span>:00</span></strong><small>MINUTES</small></div></div></div>
+              <div class="task-line"><span class="task-check">✓</span><span>Make a little progress</span><span class="note-mark" aria-hidden="true">⌁</span></div>
+              <div class="sound-line"><span class="sound-art">♫</span><span><b>Lo-fi Study</b><small>soft keys · easy focus</small></span><a class="tiny-play" href="#sound" aria-label="Explore the sound previews">▶</a></div>
+              <div class="window-foot"><span><i></i> READY WHEN YOU ARE</span><span>25 / 05</span></div>
+            </div>
+          </div>
+          <div class="hero-caption"><span class="caption-arrow">↖</span><span>A quieter corner<br>of your desktop</span></div>
+          <div class="hero-side-note">A FOCUS SESSION<br>WITHOUT THE FUSS</div>
+        </div>
       </div>
-      <div class="hero-stamp" aria-hidden="true"><span>MAKE</span><b>ROOM</b><span>TO FOCUS</span><i>✳</i></div>
-      <div class="hero-bottom"><span>01 — A CALMER WAY TO BEGIN</span><a href="#ritual">SCROLL TO FIND YOUR GROOVE <b>↓</b></a><span>MACOS 14+</span></div>
+      <div class="hero-footer"><span>01 / MAKE SPACE</span><span>SCROLL TO TUNE IN <b>↓</b></span><span>MACOS · PRIVATE BETA</span></div>
     </section>
 
-    <section class="manifesto paper-section" id="ritual">
-      <div class="section-label"><span>01</span> THE SMALL SHIFT</div>
-      <div class="manifesto-grid">
-        <h2>Make starting<br>feel <em>smaller.</em></h2>
-        <div class="manifesto-copy"><span class="hand-mark">↘</span><p>Most days don’t need another system. They need one good next step—and fewer little things tugging you away from it.</p><p>Retro brings the timer, your session note and a soundtrack into one quiet Mac app. Set it up once, then get on with your day.</p><a class="inline-link" href="#film">SEE THE APP IN MOTION <span>↘</span></a></div>
-      </div>
-      <div class="ticker" aria-label="Focus · sound · a proper break"><div class="ticker-track"><span>FOCUS</span><i>✳</i><span>SOUND</span><i>✳</i><span>A PROPER BREAK</span><i>✳</i><span>FOCUS</span><i>✳</i><span>SOUND</span><i>✳</i><span>A PROPER BREAK</span><i>✳</i></div></div>
-    </section>
+    <section class="signal-strip" aria-label="Retro: focus, sound, reset"><div class="signal-track"><span>FOCUS</span><i>✳</i><span>SOUND</span><i>✳</i><span>RESET</span><i>✳</i><span>FOCUS</span><i>✳</i><span>SOUND</span><i>✳</i><span>RESET</span><i>✳</i></div></section>
 
-    <section class="ritual-section" aria-labelledby="ritual-title">
-      <div class="ritual-intro"><div class="section-label light-label"><span>02</span> A THREE-BEAT RITUAL</div><h2 id="ritual-title">A little rhythm.<br><em>A lot more room.</em></h2><p>From opening the app to closing the loop, the point is to keep the experience calm and uncomplicated.</p></div>
-      <div class="ritual-grid">
-        <article class="ritual-card" data-step="1"><div class="card-top"><span>01 / SET A PACE</span><span class="card-arrow">↘</span></div><div class="mini-window pace-window"><div class="window-chrome"><i></i><i></i><i></i><span>FOCUS PRESETS</span></div><div class="mini-window-body"><div class="window-heading">Pick a pace</div><div class="preset-row picked"><span class="preset-icon">◌</span><span><b>Sprint</b><small>15 focus · 3 rest</small></span><strong>15 / 3</strong></div><div class="preset-row"><span class="preset-icon">◷</span><span><b>Pomodoro</b><small>25 focus · 5 rest</small></span><strong>25 / 5</strong></div><div class="preset-row"><span class="preset-icon">◉</span><span><b>Deep</b><small>50 focus · 10 rest</small></span><strong>50 / 10</strong></div></div></div><h3>Pick a pace that<br>feels doable.</h3><p>Choose a short sprint, a classic Pomodoro, or your own longer stretch.</p></article>
-        <article class="ritual-card" data-step="2"><div class="card-top"><span>02 / SETTLE IN</span><span class="card-arrow">↘</span></div><div class="mini-window focus-window"><div class="window-chrome"><i></i><i></i><i></i><span>YOUR FOCUS STRETCH</span></div><div class="focus-mini"><div class="timer-arc"><div><small>DEEP WORK</small><strong>24<span>:18</span></strong><small>OF 25 MINUTES</small></div></div><div class="focus-task"><span>✓</span> Draft the next section</div><div class="equalizer"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div><h3>Give one thing<br>your whole screen.</h3><p>Keep the next task nearby and let a bundled soundscape soften the edges.</p></article>
-        <article class="ritual-card" data-step="3"><div class="card-top"><span>03 / CLOSE THE LOOP</span><span class="card-arrow">↘</span></div><div class="mini-window recap-window"><div class="window-chrome"><i></i><i></i><i></i><span>A MOMENT TO RESET</span></div><div class="recap-mini"><div class="recap-spark">✳</div><small>SESSION COMPLETE</small><b>Nice work.<br>That counts.</b><div class="recap-stat"><span>FOCUSED</span><strong>25 min</strong></div><div class="recap-stat"><span>YOUR NOTE</span><strong>Next section</strong></div></div></div><h3>Take the break.<br>Keep the win.</h3><p>Gentle transitions and a short session recap help you stop without losing your place.</p></article>
-      </div>
-    </section>
-
-    <section class="film-section" id="film">
-      <div class="film-head"><div><div class="section-label"><span>03</span> A LOOK INSIDE</div><h2>It feels at home<br><em>on your Mac.</em></h2></div><p>Retro keeps its footprint small: a focused timer, a compact menu-bar view, sound controls, and settings when you need them.</p></div>
-      <div class="film-frame"><video controls playsinline preload="metadata" poster="assets/retro-launch-key-art.webp" aria-label="Illustrative walkthrough of the Retro focus app"><source src="assets/video/retro-walkthrough.mp4" type="video/mp4">Your browser does not support the video element.</video><div class="film-corner">RETRO · INTERFACE PREVIEW</div></div>
-      <p class="film-caption"><span>18 SEC · SOUND ON IF YOU LIKE</span><span>This is an illustrative interface preview, not a recording of a running Mac app.</span></p>
-    </section>
-
-    <section class="sound-section paper-section" id="sound">
-      <div class="section-label"><span>04</span> PICK YOUR ROOM</div>
-      <div class="sound-header"><h2>Every mood gets<br><em>a little soundtrack.</em></h2><p>Four original loops live right in the app. No streaming, no searching for the right playlist, no extra tab left open.</p></div>
-      <div class="sound-console">
-        <div class="record-stage"><div class="record-disc" aria-hidden="true"><div class="record-label"><span>RETRO<br>STEREO</span><i></i></div></div><div class="record-tonearm" aria-hidden="true"><i></i></div><div class="record-meta"><span>NOW SPINNING</span><b id="track-name">Lo-fi Study</b><small id="track-description">warm keys · soft crackle</small></div></div>
-        <div class="playlist"><div class="playlist-head"><span>THE SOUND DECK</span><span>4 ORIGINAL LOOPS</span></div>
-          <button class="track active" data-track="lofi-study" data-name="Lo-fi Study" data-description="warm keys · soft crackle" aria-pressed="true"><span class="track-num">01</span><span class="track-symbol amber">♫</span><span class="track-copy"><b>Lo-fi Study</b><small>warm keys · soft crackle</small></span><span class="track-play">PLAY</span></button>
-          <button class="track" data-track="late-night-jazz" data-name="Late-night Jazz" data-description="easy horns · blue hour" aria-pressed="false"><span class="track-num">02</span><span class="track-symbol blue">♬</span><span class="track-copy"><b>Late-night Jazz</b><small>easy horns · blue hour</small></span><span class="track-play">PLAY</span></button>
-          <button class="track" data-track="soft-piano" data-name="Soft Focus Piano" data-description="slow notes · open space" aria-pressed="false"><span class="track-num">03</span><span class="track-symbol rose">♩</span><span class="track-copy"><b>Soft Focus Piano</b><small>slow notes · open space</small></span><span class="track-play">PLAY</span></button>
-          <button class="track" data-track="rainy-cafe" data-name="Rainy Cafe" data-description="window rain · cafe hum" aria-pressed="false"><span class="track-num">04</span><span class="track-symbol sage">☂</span><span class="track-copy"><b>Rainy Cafe</b><small>window rain · cafe hum</small></span><span class="track-play">PLAY</span></button>
-          <div class="player"><button id="audio-toggle" aria-label="Play Lo-fi Study preview">▶</button><div class="player-wave" aria-hidden="true"></div><span id="audio-status">TAP TO PREVIEW</span></div>
-          <audio id="deck-audio" preload="none" loop src="assets/audio/lofi-study.wav"></audio>
-          <p class="audio-note">ORIGINAL CC0 AUDIO · PREVIEW VOLUME IS YOURS</p>
+    <section class="intro-section" id="ritual">
+      <div class="section-tag"><span>01</span><span>THE RHYTHM</span></div>
+      <div class="intro-heading"><h2>Less setting up.<br><em>More getting into it.</em></h2><p>Retro turns the start of a work session into a tiny ritual: pick a pace, choose a sound, and give one thing your attention.</p></div>
+      <div class="story-grid">
+        <div class="story-copy">
+          <article class="story-step is-active" data-step="0" id="step-pace"><button class="step-select" type="button" aria-label="Show choose a pace preview" aria-pressed="true"><span>01</span><i>↗</i></button><div><h3>Choose a pace<br>that feels doable.</h3><p>A short sprint, a classic Pomodoro, or a longer stretch. Start with the time you have.</p><div class="step-meta">A TIMER THAT MEETS YOU WHERE YOU ARE</div></div></article>
+          <article class="story-step" data-step="1" id="step-focus"><button class="step-select" type="button" aria-label="Show settle into focus preview" aria-pressed="false"><span>02</span><i>↗</i></button><div><h3>Settle into<br>one good thing.</h3><p>Keep your next task close, then let a familiar loop make the rest of the room feel farther away.</p><div class="step-meta">YOUR NOTE · YOUR SOUND · YOUR SESSION</div></div></article>
+          <article class="story-step" data-step="2" id="step-reset"><button class="step-select" type="button" aria-label="Show close the loop preview" aria-pressed="false"><span>03</span><i>↗</i></button><div><h3>Finish the session.<br>Keep the little win.</h3><p>Take a proper break and leave yourself a small reminder of where to pick up.</p><div class="step-meta">A GENTLE END, NOT ANOTHER DASHBOARD</div></div></article>
+        </div>
+        <div class="story-visual">
+          <div class="visual-sticky">
+            <div class="visual-head"><span>INSIDE RETRO</span><span><i></i> MAC INTERFACE PREVIEW</span></div>
+            <div class="demo-window" id="demo-window" data-view="pace">
+              <div class="demo-bar"><div class="traffic"><i></i><i></i><i></i></div><span id="demo-title">CHOOSE YOUR PACE</span><span class="demo-menu">•••</span></div>
+              <div class="demo-content" id="demo-content">
+                <div class="demo-kicker">A SMALL SESSION IS STILL A SESSION</div>
+                <h4 id="demo-heading">How much time<br>have you got?</h4>
+                <div class="preset-list" id="preset-list">
+                  <button type="button" class="preset is-selected" data-minutes="15" aria-pressed="true"><span class="preset-icon">◌</span><span><b>Sprint</b><small>15 focus · 3 rest</small></span><strong>15 / 03</strong></button>
+                  <button type="button" class="preset" data-minutes="25" aria-pressed="false"><span class="preset-icon">◷</span><span><b>Pomodoro</b><small>25 focus · 5 rest</small></span><strong>25 / 05</strong></button>
+                  <button type="button" class="preset" data-minutes="50" aria-pressed="false"><span class="preset-icon">◉</span><span><b>Deep focus</b><small>50 focus · 10 rest</small></span><strong>50 / 10</strong></button>
+                </div>
+                <div class="demo-timer" id="demo-timer" hidden><div class="demo-ring"><div><small>FOCUS</small><strong>24<span>:18</span></strong></div></div><div class="demo-task"><span>✓</span><b>Draft the next section</b><small>YOUR SESSION NOTE</small></div><div class="demo-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+                <div class="demo-recap" id="demo-recap" hidden><div class="recap-spark">✳</div><span>SESSION COMPLETE</span><h5>Nice work.<br>That counts.</h5><div class="recap-row"><small>FOCUSED</small><b>25 min</b></div><div class="recap-row"><small>YOUR NOTE</small><b>Next section</b></div></div>
+                <div class="demo-bottom"><span><i></i> A MOMENT FOR YOURSELF</span><span id="demo-time">15 MIN</span></div>
+              </div>
+            </div>
+            <div class="demo-controls" role="tablist" aria-label="Preview the Retro session steps"><button class="demo-tab is-active" type="button" role="tab" aria-selected="true" data-view="pace"><span>01</span> Pace</button><button class="demo-tab" type="button" role="tab" aria-selected="false" data-view="focus"><span>02</span> Focus</button><button class="demo-tab" type="button" role="tab" aria-selected="false" data-view="reset"><span>03</span> Reset</button></div>
+            <p class="illustration-note">Illustrative interface preview, not a screen recording from the running Mac app.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="mac-details">
-      <div class="section-label light-label"><span>05</span> CONSIDERATE BY DEFAULT</div><div class="detail-grid"><h2>Built for focus.<br><em>Never the other way around.</em></h2><div class="details-list"><article><span>01</span><div><b>Your work stays yours.</b><p>Session notes and history are stored locally on your Mac.</p></div><i>↗</i></article><article><span>02</span><div><b>System access is optional.</b><p>Extra focus tools ask before using macOS or browser permissions.</p></div><i>↗</i></article><article><span>03</span><div><b>Quiet can stay quiet.</b><p>Reminders and site protection are choices, not defaults.</p></div><i>↗</i></article></div></div>
+    <section class="preview-section" id="preview">
+      <div class="preview-orb" aria-hidden="true"></div>
+      <div class="preview-top"><div class="section-tag section-tag-light"><span>02</span><span>TAKE A CLOSER LOOK</span></div><p>A tiny app with a small footprint. Timer, session note, sound and settings, all in one calm corner of your Mac.</p></div>
+      <h2>Your desktop,<br><em>with a little breathing room.</em></h2>
+      <div class="video-shell"><div class="video-topline"><span><i></i><i></i><i></i></span><b>RETRO / INTERFACE PREVIEW</b><span>00:18</span></div><video controls playsinline preload="metadata" poster="assets/retro-walkthrough-poster.jpg" aria-label="Illustrative walkthrough of the Retro focus app"><source src="assets/video/retro-walkthrough.mp4" type="video/mp4">Your browser does not support the video element.</video><div class="video-caption"><span>AN 18-SECOND LOOK INSIDE</span><span>Illustrative interface preview, not footage from a running Mac app.</span></div></div>
+      <div class="preview-bottom"><span>BUILT FOR MAC</span><span>NOT A PUBLIC DOWNLOAD</span><span>DESIGNED TO STAY OUT OF YOUR WAY</span></div>
     </section>
 
-    <section class="beta-section" id="beta"><div class="beta-orbit" aria-hidden="true"><span></span><i>✳</i></div><img src="assets/retro-mark.png" alt="" width="54" height="54"><p class="kicker">A QUIETER KIND OF DESKTOP</p><h2>Make room<br><em>for your next good hour.</em></h2><p class="beta-copy">Retro for Mac is in private beta and isn’t available for public download.</p><div class="beta-note"><span></span> PRIVATE BETA · NOT PUBLICLY AVAILABLE</div><a class="back-top" href="#top">BACK TO THE TOP ↑</a></section>
+    <section class="sound-section" id="sound">
+      <div class="section-tag"><span>03</span><span>THE SOUND DECK</span></div>
+      <div class="sound-intro"><h2>Set the room<br><em>to your frequency.</em></h2><p>Four original loops, bundled with Retro. Pick one that helps the world outside your window fade a little.</p></div>
+      <div class="sound-layout">
+        <div class="sound-art-panel"><div class="cassette-scene"><div class="sound-halo"></div><div class="cassette"><div class="cassette-top"><span>RETRO STEREO</span><span>TYPE I · 60 MIN</span></div><div class="cassette-window"><div class="reel reel-a"></div><div class="tape-line"></div><div class="reel reel-b"></div></div><div class="cassette-label"><span id="cassette-track">LO-FI STUDY</span><b>ROOM TO FOCUS</b></div><div class="cassette-bottom"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="sound-caption"><span>ORIGINAL LOOPS</span><span>01 — 04</span></div></div></div>
+        <div class="playlist"><div class="playlist-heading"><span>CHOOSE YOUR SOUND</span><span>4 TRACKS</span></div>
+          <button class="track is-active" data-track="lofi-study" data-name="Lo-fi Study" data-caption="warm keys · soft crackle" aria-pressed="true"><span class="track-number">01</span><span class="track-color color-amber">♫</span><span class="track-text"><b>Lo-fi Study</b><small>warm keys · soft crackle</small></span><span class="track-action">PLAY</span></button>
+          <button class="track" data-track="late-night-jazz" data-name="Late-night Jazz" data-caption="easy horns · blue hour" aria-pressed="false"><span class="track-number">02</span><span class="track-color color-blue">♬</span><span class="track-text"><b>Late-night Jazz</b><small>easy horns · blue hour</small></span><span class="track-action">PLAY</span></button>
+          <button class="track" data-track="soft-piano" data-name="Soft Focus Piano" data-caption="slow notes · open space" aria-pressed="false"><span class="track-number">03</span><span class="track-color color-rose">♩</span><span class="track-text"><b>Soft Focus Piano</b><small>slow notes · open space</small></span><span class="track-action">PLAY</span></button>
+          <button class="track" data-track="rainy-cafe" data-name="Rainy Cafe" data-caption="window rain · cafe hum" aria-pressed="false"><span class="track-number">04</span><span class="track-color color-sage">☂</span><span class="track-text"><b>Rainy Cafe</b><small>window rain · cafe hum</small></span><span class="track-action">PLAY</span></button>
+          <div class="audio-player"><button id="audio-toggle" type="button" aria-label="Play Lo-fi Study preview">▶</button><div class="waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span id="audio-status">TAP TO PREVIEW</span></div>
+          <audio id="deck-audio" preload="none" loop src="assets/audio/lofi-study.wav"></audio><p class="audio-note">LOCAL AUDIO · PLAY WHEN YOU WANT</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="principles-section">
+      <div class="section-tag section-tag-light"><span>04</span><span>MADE FOR THE MOMENT</span></div>
+      <div class="principles-grid"><h2>Calm by design.<br><em>Useful by nature.</em></h2><div class="principles-list"><article><span>01</span><div><b>Your work stays yours.</b><p>Session notes and history are stored locally on your Mac.</p></div><i>↗</i></article><article><span>02</span><div><b>Start with the essentials.</b><p>A focus timer, a task note and a soundscape in one place.</p></div><i>↗</i></article><article><span>03</span><div><b>A softer way to finish.</b><p>Small transitions help make a break feel like part of the rhythm.</p></div><i>↗</i></article></div></div>
+    </section>
+
+    <section class="beta-section" id="beta"><div class="beta-ornament" aria-hidden="true"><span></span><i>✳</i></div><img src="assets/retro-mark.png" width="48" height="48" alt=""><div class="section-tag"><span>05</span><span>IN THE WORKS</span></div><h2>A little more room<br><em>for the good part.</em></h2><p>Retro for Mac is in private beta and isn’t available for public download.</p><div class="beta-status"><i></i> PRIVATE BETA · NOT PUBLICLY AVAILABLE</div></section>
   </main>
-  <footer class="footer"><a class="wordmark" href="#top"><img src="assets/retro-mark.png" width="27" height="27" alt=""><span>retro<span class="period">.</span></span></a><span>MAKE ROOM TO FOCUS</span><span>MACOS · PRIVATE BETA</span></footer>
+  <footer class="footer"><a class="brand" href="#top"><img src="assets/retro-mark.png" width="28" height="28" alt=""><span>retro<span>.</span></span></a><span>MAKE ROOM FOR FOCUS</span><a href="#top">BACK TO TOP ↑</a></footer>
 </body>
 </html>
