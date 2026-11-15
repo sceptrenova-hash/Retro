@@ -1,6 +1,6 @@
 # Retro — focus app landing page
 
-A responsive, single-page landing page for the Retro macOS focus app. It pairs a bright, product-led hero with an interactive Mac-interface preview, scroll-linked session story, an illustrative video walkthrough, and a playable sound deck. Built with plain HTML, CSS, and JavaScript; no build step, backend, account system, or external JavaScript library is required.
+A responsive, single-page landing page for the Retro macOS focus app. It uses a vivid analog-editorial art direction, an interactive Mac-interface concept, a scroll-led session story, an illustrative walkthrough, and a playable sound deck. Built with plain HTML, CSS, and JavaScript; no build step, backend, account system, or external JavaScript library is required.
 
 ## Preview locally
 
@@ -41,7 +41,7 @@ Keep the relative asset paths intact if hosting below a repository path. This pu
 - `index.html` — page structure and copy.
 - `styles.css` — layout, responsive styles, and motion.
 - `script.js` — scroll progress, active section markers, interactive session preview, and local audio playback.
-- `assets/retro-launch-key-art.webp` — original illustrative hero artwork.
+- `assets/retro-campaign.webp` — original editorial campaign artwork.
 - `assets/video/retro-walkthrough.mp4` — the 18-second illustrative walkthrough.
 - `assets/retro-icon.png` and `assets/retro-mark.png` — supplied Retro identity artwork.
 - `assets/audio/*.wav` — the four bundled Retro soundscape files, reproduced for the preview.
