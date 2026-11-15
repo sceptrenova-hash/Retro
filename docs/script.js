@@ -15,6 +15,27 @@
   addEventListener('resize', updateProgress, {passive:true});
   updateProgress();
 
+  // Let the long-form story arrive gently as it enters view. Motion is opt-in
+  // only for visitors who have not asked the system to reduce it.
+  const revealTargets = document.querySelectorAll('.intro-heading, .story-step, .visual-sticky, .preview-top, .preview-section h2, .video-shell, .sound-intro, .sound-art-panel, .track, .principles-grid h2, .principles-list article, .beta-section > .section-tag, .beta-section > img, .beta-section > h2, .beta-section > p, .beta-status');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('in');
+        revealObserver.unobserve(entry.target);
+      });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:.08});
+    revealTargets.forEach(element => { element.classList.add('reveal'); revealObserver.observe(element); });
+  }
+
+  const heroArt = document.querySelector('.hero-art');
+  function moveHeroArt() {
+    if (heroArt && !reduceMotion) heroArt.style.setProperty('--hero-shift', `${-Math.min(scrollY * .025, 12)}px`);
+  }
+  addEventListener('scroll', moveHeroArt, {passive:true});
+  moveHeroArt();
+
   const sections = [...document.querySelectorAll('.nav nav a')].map(a => [a, document.querySelector(a.getAttribute('href'))]).filter(([,s]) => s);
   if ('IntersectionObserver' in window) {
     const navObserver = new IntersectionObserver(entries => {
