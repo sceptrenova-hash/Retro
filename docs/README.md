@@ -1,6 +1,6 @@
 # Retro — focus app landing page
 
-A responsive, single-page scrollytelling site for the Retro macOS focus app. It uses plain HTML, CSS, and JavaScript; there is no build step, backend, account system, or external JavaScript library. The four local WAV files power the interactive sound-deck preview. The supplied Retro app icon is used as the site mark.
+A responsive, single-page landing page for the Retro macOS focus app. It pairs a cinematic illustrated hero with an editorial product story, an illustrative app walkthrough, and a playable sound preview. Built with plain HTML, CSS, and JavaScript; no build step, backend, account system, or external JavaScript library is required.
 
 ## Preview locally
 
@@ -29,16 +29,19 @@ Keep the relative asset paths intact if hosting below a repository path. This pu
 
 ## Accessibility and behavior
 
-- Keyboard-friendly links and buttons; the story tabs support arrow, Home, and End keys, and audio track selection exposes its pressed state.
+- Keyboard-friendly links and buttons, visible focus states, and a skip link.
 - `prefers-reduced-motion` disables scroll-driven movement and decorative animation.
-- Responsive layout for phone, tablet, and desktop widths.
-- No account data is collected or sent anywhere. Sound files load from this site's own `assets/audio/` folder.
-- The focus timer shown in the hero and feature panels is illustrative artwork, not a live timer or screenshot of the running app.
+- Responsive layouts for phone, tablet, and desktop widths.
+- Sound playback requires an intentional click and uses local audio files.
+- The walkthrough is an illustrative interface preview, not a capture from a running Mac app. The interface mockups and timer artwork elsewhere on the page are also illustrative.
+- No account data is collected or sent anywhere.
 
 ## Contents
 
 - `index.html` — page structure and copy.
 - `styles.css` — layout, responsive styles, and motion.
-- `script.js` — scroll progress/reveals, scroll-linked story depth, accessible story navigation, active section markers, and local audio preview.
-- `assets/retro-icon.png` — supplied Retro app icon used as the site identity.
+- `script.js` — scroll progress/reveals, active section markers, and local audio preview.
+- `assets/retro-launch-key-art.webp` — original illustrative hero artwork.
+- `assets/video/retro-walkthrough.mp4` — the 18-second illustrative walkthrough.
+- `assets/retro-icon.png` and `assets/retro-mark.png` — supplied Retro identity artwork.
 - `assets/audio/*.wav` — the four bundled Retro soundscape files, reproduced for the preview.
