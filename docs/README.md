@@ -25,7 +25,7 @@ GitHub Pages is a good fit for this static site. Its free offering supports Page
 4. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/(root)`, then save.
 5. Wait for the Pages deployment, then use the site URL shown in **Settings → Pages**. For a project repository it is usually `https://YOUR-USERNAME.github.io/REPOSITORY/`.
 
-Keep the relative asset paths intact if hosting below a repository path. This is a promotional site, not an installer: it does not include a signed/notarized macOS app download or a hosted Swift-project ZIP link. The underlying Swift project still needs a Mac with Xcode to build and test; this page does not claim otherwise.
+Keep the relative asset paths intact if hosting below a repository path. This public site is only a preview. Retro for Mac is in private beta and is not available for public download; this site does not include or link to a DMG, installer, or Swift-project ZIP. The underlying Swift project still needs a Mac with Xcode to build and test; this page does not claim otherwise.
 
 ## Accessibility and behavior
 
