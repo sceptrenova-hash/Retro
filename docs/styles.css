@@ -63,3 +63,9 @@ body{background:radial-gradient(ellipse at 75% 12%,rgba(255,232,198,.3),transpar
 @media(max-width:740px){.site-ribbon{height:34px;gap:10px;font-size:.43rem}.site-ribbon a{display:none}.site-header{top:6px;margin-top:7px;width:calc(100% - 24px);height:62px;padding:0 15px;border-radius:13px}.beta-tag{font-size:.44rem}.hero{padding-top:16px}.hero-grid{padding-top:35px;gap:20px}.hero h1{font-size:clamp(5.4rem,18vw,7.2rem);line-height:.79}.hero-art-frame{border-radius:14px}.feature-card{border-radius:15px;min-height:445px}.demo-shell{border-radius:14px}.story-stage,.stage-frame{border-radius:14px}.manifesto>p{font-size:clamp(3.4rem,13vw,6.1rem)}}
 @media(max-width:390px){.site-ribbon{font-size:.4rem}.hero h1{font-size:5.15rem}.hero-actions{gap:.9rem}.button{border-radius:9px}.beta-tag{padding:.48rem .55rem}}
 @media(prefers-reduced-motion:reduce){.site-ribbon a,.feature-card,.track-option{transition:none}}
+/* Keep the expressive display face comfortably clear of the supporting copy. */
+.hero h1{font-size:clamp(5.4rem,8.2vw,8rem);line-height:.94;letter-spacing:-.065em}
+.title-line{overflow:visible;padding:0 .08em .06em 0}
+.hero h1 em{letter-spacing:-.06em}
+@media(max-width:740px){.hero h1{font-size:clamp(4.7rem,15vw,6.5rem);line-height:.92}.title-line{padding-bottom:.07em}}
+@media(max-width:390px){.hero h1{font-size:4.9rem;line-height:.92}}
