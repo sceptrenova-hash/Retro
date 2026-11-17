@@ -1,0 +1,22 @@
+Retro website sound-deck samples
+
+These four MP3s are bundled soundtrack choices for the Retro website preview. They are separate from Retro's code, interface, artwork, and other project materials.
+
+1. Lo-fi — “Cue” by TAD
+Source: https://opengameart.org/content/lofi-compilation
+License listed on the source page: CC0 1.0 Universal. Attribution is not required; the website credits TAD.
+
+2. Jazz — “One Step at a Time” by Alex McCulloch (Pro Sensory)
+Source: https://opengameart.org/content/one-step-at-a-time
+License listed on the source page: CC0. The creator says attribution is appreciated but not required; the website credits Alex McCulloch.
+
+3. Piano — “Piano” by maggie.beans3696
+Source: https://opengameart.org/content/piano-0
+License: Creative Commons Attribution 4.0 (CC BY 4.0).
+Attribution: “Piano” by maggie.beans3696, OpenGameArt.
+
+4. Rainy Cafe — rain by Matt Barnard and cafe by Samuel Justice
+Source and credits: https://rainycafe.com/
+The Rainy Cafe page credits both recordings as Creative Commons Attribution 3.0 (CC BY 3.0), from SoundCloud. Rain and cafe recordings are mixed into one MP3.
+
+These statements reflect the corresponding source pages as checked for this release; consult each source page for its full license terms and attribution context.
