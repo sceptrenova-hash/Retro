@@ -15,3 +15,25 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}.story-beat{opacity:1;transform:none}}
 .hero-art[data-parallax]{transform:perspective(1200px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg)) rotate(1.1deg);transform-style:preserve-3d}.hero-art[data-parallax]:hover{transform:perspective(1200px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg)) rotate(0deg) translateY(-5px)}
 @media(max-width:740px){.hero-art[data-parallax],.hero-art[data-parallax]:hover{transform:none}}
+
+/* A continuous, scroll-led arc: scattered thoughts gather into a focus orbit,
+   then resolve into sound. This is page art, not a capture of the Mac app. */
+.story-stage{--story-p:0;--photo-transform:scale(1.04);--photo-filter:saturate(.52) brightness(.62);--frame-transform:none;--noise-a-transform:none;--noise-b-transform:none;--noise-c-transform:none;--stamp-transform:none;--noise-a-opacity:1;--noise-b-opacity:1;--noise-c-opacity:1;--stamp-opacity:1;--focus-transform:none;--orbit-transform:none;--orbit-size:56%;--orbit-height:66%;--orbit-opacity:.38;--note-transform:none;--disc-transform:none;--return-transform:none;--caption-transform:none;--flare-left:10%;--flare-top:77%;--flare-scale:.65;--flare-opacity:.22;transform-style:preserve-3d}
+.stage-frame{background:radial-gradient(ellipse at 54% 48%,rgba(240,90,50,.12),transparent 55%),#121716;transform:var(--frame-transform);transition:transform .35s linear,box-shadow .6s var(--ease)}
+.stage-frame:after{content:"";position:absolute;inset:0;z-index:7;pointer-events:none;background:radial-gradient(ellipse at 48% 50%,rgba(240,90,50,.18),transparent 35%),linear-gradient(120deg,transparent 28%,rgba(255,244,220,.045) 49%,transparent 67%);mix-blend-mode:screen;opacity:.4}
+.stage-photo{transform:var(--photo-transform);filter:var(--photo-filter);transition:none}
+.noise-card-a{transform:var(--noise-a-transform);opacity:var(--noise-a-opacity)}.noise-card-b{transform:var(--noise-b-transform);opacity:var(--noise-b-opacity)}.noise-card-c{transform:var(--noise-c-transform);opacity:var(--noise-c-opacity)}.noise-stamp{transform:var(--stamp-transform);opacity:var(--stamp-opacity)}
+.focus-window{transform:var(--focus-transform)}.focus-orbit{width:var(--orbit-size);height:var(--orbit-height);transform:var(--orbit-transform);opacity:var(--orbit-opacity)}.focus-note{transform:var(--note-transform)}
+.return-disc{transform:var(--disc-transform);animation:none}.return-copy{transform:var(--return-transform);transition:transform .35s linear}.return-caption{transform:var(--caption-transform)}
+.story-thread{position:absolute;inset:0;z-index:6;width:100%;height:100%;overflow:visible;pointer-events:none;opacity:.7}
+.story-thread path{fill:none;stroke:rgba(255,156,105,.7);stroke-width:1.2;stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--story-p));filter:drop-shadow(0 0 7px rgba(240,90,50,.6))}
+.story-thread circle{fill:#ff9c69;filter:drop-shadow(0 0 9px rgba(240,90,50,.9));opacity:var(--story-p)}
+.story-flare{position:absolute;z-index:6;left:var(--flare-left);top:var(--flare-top);width:8px;height:8px;border-radius:50%;background:#fff0d6;box-shadow:0 0 16px 5px rgba(240,90,50,.46),0 0 52px 18px rgba(240,90,50,.16);opacity:var(--flare-opacity);transform:scale(var(--flare-scale));pointer-events:none}
+.story-stage[data-stage="0"] .focus-layer,.story-stage[data-stage="0"] .return-layer,.story-stage[data-stage="1"] .return-layer,.story-stage[data-stage="2"] .focus-layer{pointer-events:none}
+@media(max-width:900px){.story-stage{transform:none}.stage-frame{transform:none}.story-thread{opacity:.42}.noise-card{min-width:125px;padding:11px}.focus-window{width:82%}}
+@media(max-width:560px){.story-thread{opacity:.26}.story-flare{width:6px;height:6px}.noise-card-a{left:6%}.noise-card-b{right:5%}.noise-card-c{left:15%}}
+@media(prefers-reduced-motion:reduce){.story-thread,.story-flare{display:none}.stage-frame,.stage-photo,.noise-card-a,.noise-card-b,.noise-card-c,.noise-stamp,.focus-window,.focus-orbit,.focus-note,.return-disc,.return-copy,.return-caption{transform:none!important;transition:none!important}}
+/* Scroll-driven transforms must track the finger/wheel directly, not trail it. */
+.stage-frame,.stage-photo,.noise-card-a,.noise-card-b,.noise-card-c,.noise-stamp,.focus-window,.focus-note,.return-disc,.return-copy,.return-caption{transition:none}
+#story-stage .focus-window{transform:var(--focus-transform)}
+#story-stage[data-stage="2"] .stage-photo{transform:var(--photo-transform);filter:var(--photo-filter)}

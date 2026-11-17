@@ -43,6 +43,54 @@
       }, {rootMargin:'-42% 0px -42% 0px', threshold:[0,.1,.3,.6]});
       beats.forEach(beat => beatObserver.observe(beat));
       setStage(0);
+
+      // A single scroll progress value choreographs the scene: fragments loosen,
+      // gather around the timer, then resolve into the soundtrack record.
+      const storyLayout = document.querySelector('.story-layout');
+      let motionQueued = false;
+      const updateStoryMotion = () => {
+        if (motionQueued) return;
+        motionQueued = true;
+        requestAnimationFrame(() => {
+          if (storyLayout) {
+            const rect = storyLayout.getBoundingClientRect();
+            const travel = Math.max(1, rect.height - innerHeight * .52);
+            const p = Math.max(0, Math.min(1, (innerHeight * .48 - rect.top) / travel));
+            const eased = p * p * (3 - 2 * p);
+            stage.style.setProperty('--story-p', eased.toFixed(4));
+            const set = (name,value) => stage.style.setProperty(name,value);
+            set('--photo-transform',`scale(${(1.04 + eased * .16).toFixed(3)}) translate3d(${((.5-eased)*2).toFixed(2)}%,${((.5-eased)*-1).toFixed(2)}%,0)`);
+            set('--photo-filter',`saturate(${(.52 + eased * .32).toFixed(3)}) brightness(${(.62 - eased * .12).toFixed(3)})`);
+            set('--frame-transform',`rotateX(${((.5-eased)*2).toFixed(2)}deg)`);
+            set('--noise-a-transform',`translate3d(${(-eased*110).toFixed(1)}px,${(-eased*80).toFixed(1)}px,0) rotate(${-9-eased*18}deg) scale(${1-eased*.22})`);
+            set('--noise-b-transform',`translate3d(${(eased*105).toFixed(1)}px,${(-eased*46).toFixed(1)}px,0) rotate(${7+eased*22}deg) scale(${1-eased*.2})`);
+            set('--noise-c-transform',`translate3d(${(-eased*42).toFixed(1)}px,${(eased*110).toFixed(1)}px,0) rotate(${4-eased*15}deg) scale(${1-eased*.25})`);
+            set('--stamp-transform',`translate3d(${(eased*86).toFixed(1)}px,${(eased*55).toFixed(1)}px,0) rotate(${12+eased*28}deg) scale(${1-eased*.48})`);
+            set('--noise-a-opacity',String(Math.max(0,1-eased*1.25)));
+            set('--noise-b-opacity',String(Math.max(0,1-eased*1.2)));
+            set('--noise-c-opacity',String(Math.max(0,1-eased*1.3)));
+            set('--stamp-opacity',String(Math.max(0,1-eased*1.35)));
+            const focus = Math.max(0,1-Math.abs(eased-.5)*2);
+            set('--focus-transform',`translate3d(${((.5-eased)*72).toFixed(1)}px,${((.5-eased)*34).toFixed(1)}px,0) rotate(${((.5-eased)*-8).toFixed(2)}deg) scale(${(.88+focus*.16).toFixed(3)})`);
+            set('--orbit-transform',`rotate(${-44+eased*30}deg) scale(${(.84+focus*.18).toFixed(3)})`);
+            set('--orbit-size',`${56+focus*24}%`);
+            set('--orbit-height',`${66+focus*32}%`);
+            set('--orbit-opacity',String(.38+focus*.62));
+            set('--note-transform',`translate3d(${((.5-eased)*50).toFixed(1)}px,${((.5-eased)*-28).toFixed(1)}px,0) rotate(${10-eased*10}deg)`);
+            set('--disc-transform',`translate3d(${((.5-eased)*110).toFixed(1)}px,${((.5-eased)*32).toFixed(1)}px,0) rotate(${(.5-eased)*18}deg) scale(${(.8+eased*.2).toFixed(3)})`);
+            set('--return-transform',`translate3d(${((.5-eased)*-82).toFixed(1)}px,${((.5-eased)*42).toFixed(1)}px,0)`);
+            set('--caption-transform',`translate3d(${((.5-eased)*48).toFixed(1)}px,${((.5-eased)*-20).toFixed(1)}px,0) rotate(${-4-eased*7}deg)`);
+            set('--flare-left',`${10+eased*76}%`);
+            set('--flare-top',`${77-eased*58}%`);
+            set('--flare-scale',String(.65+eased*.6));
+            set('--flare-opacity',String(.22+eased*.78));
+          }
+          motionQueued = false;
+        });
+      };
+      addEventListener('scroll', updateStoryMotion, {passive:true});
+      addEventListener('resize', updateStoryMotion, {passive:true});
+      updateStoryMotion();
     }
   }
 
