@@ -54,7 +54,7 @@
         requestAnimationFrame(() => {
           if (storyLayout) {
             const rect = storyLayout.getBoundingClientRect();
-            const travel = Math.max(1, rect.height - innerHeight * .52);
+            const travel = Math.max(1, rect.height);
             const p = Math.max(0, Math.min(1, (innerHeight * .48 - rect.top) / travel));
             const eased = p * p * (3 - 2 * p);
             stage.style.setProperty('--story-p', eased.toFixed(4));
